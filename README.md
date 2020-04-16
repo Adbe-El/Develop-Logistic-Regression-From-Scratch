@@ -16,7 +16,7 @@ Recall that inorder to transform the above function we make use of the sigmoid f
 
 ![image2 showing sigmoid function](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/2.%20sigmoid%20function.png)
 
-Its graphical represented as:
+Its graphically represented as:
 
 ![image3 showing the graphical representation of the sigmoid function](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/3.%20Sigmoid%20plot.png)
 
@@ -28,8 +28,8 @@ Substituting the linear regression equation into the sigmoid function, satisfyin
 ![image4 showing the transformed linear regression](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/4.%20Substituted%20Sigmoid%20function.png)
 
 on substituting, x from the sigmoid function equals (wx + b) from the linear regression fumction
-where     h(x) is the transformed linear regression function, which is the logistic regression function 
-          y_hat is the predicted value of the target varible
+where     **h(x)** is the transformed linear regression function, which is the logistic regression function 
+          **y_hat** is the predicted value of the target varible
 
 
 ### 2. Cost Function
@@ -37,7 +37,7 @@ The cost function we use here is the Cross Entropy Cost Function. It is shown ma
 
 ![image5 showing the Cross Entropy Cost Function](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/5.%20Cost%20Function.png)
 
-What is a COST FUNCTION
+#### What is a COST FUNCTION?
 The cost function measures how poorly a model does in terms of its ability to estimate the relationship between the independent variable(X) and the dependent variable (y). The goal therefore in this case is minimise or reduce the cost function. In reducing the Cost function what we are doin in essence is reducing the weights or finding what value of weights and biases would minimise the cost function and in turn optimise our Machine Learning model. 
 To minimise the cost function by applying something called a **Gradient descent** on the cost function. The gradient descent is simply a partial differentation applied of the cost function with respect to the weights and biases.
 
@@ -49,7 +49,15 @@ On applying gradient descent the updated weights, biases and cost function becom
 
 ![image8 showing updated weights, biases and cost functions](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/8.%20Updated%20Weights.png)
 
+**Note: dJ/dw = dw
+        dJ/db = db**
 
+## Code Description 
 
+1. A class **LogisticRegression** was created.
 
+2. An iniialisation function is created to intitialise all parameters namely: **learning rate(lr), number of iterations (n_iters), biases and weights.**
 
+3. A function called **sigmoid** is created that returns the mathematical convention of the sigmoid function as cited above.
+
+4. A function called **fit** is created
