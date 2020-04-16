@@ -8,7 +8,7 @@ Logistic Regression function is derived from the transformation of a Linear Regr
 ### 1. Generating the Logistic Regression from Linear Regression
 First the linear regression is given below as:
 
-![image1 showing Linear Regression]
+![image1 showing Linear Regression](
 
 where **w represents the weights, x represents the matrix of features or the input vector and b represents the bias**
 
