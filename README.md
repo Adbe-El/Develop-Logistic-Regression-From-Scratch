@@ -68,8 +68,8 @@ On applying gradient descent the updated weights, biases and cost function becom
 
 3. A function called **_sigmoid** is created that returns the mathematical convention of the sigmoid function as cited above.
           
-          '''def _sigmoid(self, x):
-        return 1 / (1 + np.exp(-x))'''
+            '''def _sigmoid(self, x):
+                    return 1 / (1 + np.exp(-x))'''
 
 4. We define a function called **predict** that takes a parameter X(the independent variables). Within the function
 - We assign the mathematical estimation for the linear regression model to the variable name **linear_model**
