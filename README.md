@@ -49,8 +49,10 @@ On applying gradient descent the updated weights, biases and cost function becom
 
 ![image8 showing updated weights, biases and cost functions](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/8.%20Updated%20Weights.png)
 
-**Note: dJ/dw = dw
-        dJ/db = db**
+**Note: J'= updated cost functions
+        dJ/dw = dw
+        dJ/db = db
+        N = number of samples**
 
 ## Code Description 
 
@@ -58,6 +60,21 @@ On applying gradient descent the updated weights, biases and cost function becom
 
 2. An iniialisation function is created to intitialise all parameters namely: **learning rate(lr), number of iterations (n_iters), biases and weights.**
 
-3. A function called **sigmoid** is created that returns the mathematical convention of the sigmoid function as cited above.
+3. We define a function called **predict** that takes a parameter X(the independent variables). Within the function
+           * We assign the mathematical estimation for the linear regression model to the variable name **linear_model**
+           * apply the **sigmoid** function to the **linear_model** and assigned it the variable name **y_predicted**
+           * we define the threshold within our sigmoid function for returning values of 0 and ! assigned to the variable name **y_predicted_cls** and return the array of the resulting value. 
 
-4. A function called **fit** is created
+
+4. A function called **_sigmoid** is created that returns the mathematical convention of the sigmoid function as cited above.
+
+5. A function called **fit** is created. Within this function  
+           * we assign the number of samples(n_samples) and the number of features(n_features) values equivalent to the number rows and columns of our independent variable(X) respectively.
+           * the weights are initialised using an array of zeroes following the dimension of n_features and bias is initialised with zero.
+           * a **for loop** is created following the iterative process of the gradient descent of the cost function. The number of times the loop is set to run given by the value  **n_iters**.
+           * Within the **for loop** we have the following:
+                      * We assign the mathematical estimation for the linear regression model to the variable name **linear_model**
+                      * apply the **sigmoid** function to the **linear_model** and assigned it the variable name **y_predicted**
+                      * compute the gradients of both weights and bias, given as **dw** and **db** given by the equation.
+                      * update the weights and bias using.
+6. Finally, we test our model on the breast cancer data set from sklearn package.
