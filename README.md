@@ -8,24 +8,24 @@ Logistic Regression function is derived from the transformation of a Linear Regr
 ### 1. Generating the Logistic Regression from Linear Regression
 First the linear regression is given below as:
 
-![image1 showing Linear Regression](
+![image1 showing Linear Regression](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/1.Linear%20Regression%20Equation.png)
 
 where **w represents the weights, x represents the matrix of features or the input vector and b represents the bias**
 
 Recall that inorder to transform the above function we make use of the sigmoid function. The sigmoid function is shown below: 
 
-![image2 showing sigmoid function]
+![image2 showing sigmoid function](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/2.%20sigmoid%20function.png)
 
 Its graphical represented as:
 
-![image3 showing the graphical representation of the sigmoid function]
+![image3 showing the graphical representation of the sigmoid function](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/3.%20Sigmoid%20plot.png)
 
 The purpose of the sigmoid function is to transform the above linear regression into generating output values as in form probabilities of that fall between 0 and 1. 
 Even after this tranformation the outputs do not yet reflect what the typical classification output should look like. So, we set a threshold is set at x = 0.5, such that all values greater than and equal to 0.5 are approximated as 1 and others less than this threshold are rounded down as 0.
 
-Substituting linear regression equation into the sigmoid function, satisfying the above conditions for x= 0.5 as the threshold. We have
+Substituting the linear regression equation into the sigmoid function, satisfying the above conditions for x= 0.5 as the threshold. We have new sigmoid function to be:
 
-![image4 showing the transformed linear regression]
+![image4 showing the transformed linear regression](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/4.%20Substituted%20Sigmoid%20function.png)
 
 on substituting, x from the sigmoid function equals (wx + b) from the linear regression fumction
 where     h(x) is the transformed linear regression function, which is the logistic regression function 
@@ -35,19 +35,19 @@ where     h(x) is the transformed linear regression function, which is the logis
 ### 2. Cost Function
 The cost function we use here is the Cross Entropy Cost Function. It is shown mathematically as:
 
-![image5 showing the Cross Entropy Cost Function]
+![image5 showing the Cross Entropy Cost Function](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/5.%20Cost%20Function.png)
 
 What is a COST FUNCTION
 The cost function measures how poorly a model does in terms of its ability to estimate the relationship between the independent variable(X) and the dependent variable (y). The goal therefore in this case is minimise or reduce the cost function. In reducing the Cost function what we are doin in essence is reducing the weights or finding what value of weights and biases would minimise the cost function and in turn optimise our Machine Learning model. 
 To minimise the cost function by applying something called a **Gradient descent** on the cost function. The gradient descent is simply a partial differentation applied of the cost function with respect to the weights and biases.
 
-![image6 showing the Gradient Descent on the weight]
+![image6 showing the Gradient Descent on the weight](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/6.%20Gradient%20Descent.png)
 
-![image7 showing the difference between a big learning rate versus small learning rate]
+![image7 showing the difference between a big learning rate versus small learning rate](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/7.%20Learning%20Rate.png)
 
 On applying gradient descent the updated weights, biases and cost function becomes:
 
-![image8 showing updated weights, biases and cost functions]
+![image8 showing updated weights, biases and cost functions](https://raw.githubusercontent.com/Adbe-El/Develop-Logistic-Regression-From-Scratch/master/Images/8.%20Updated%20Weights.png)
 
 
 
