@@ -60,11 +60,11 @@ On applying gradient descent the updated weights, biases and cost function becom
           '''class LogisticRegression:'''
 
 2. An iniialisation function is created to intitialise all parameters namely: **learning rate(lr), number of iterations (n_iters), biases and weights.**
-            '''def __init__(self, learning_rate=0.001, n_iters=1000):
-        self.lr = learning_rate
-        self.n_iters = n_iters
-        self.weights = None
-        self.bias = None'''
+                      '''def __init__(self, learning_rate=0.001, n_iters=1000):
+                                 self.lr = learning_rate
+                                 self.n_iters = n_iters
+                                 self.weights = None
+                                 self.bias = None'''
 
 3. A function called **_sigmoid** is created that returns the mathematical convention of the sigmoid function as cited above.
           
@@ -72,9 +72,9 @@ On applying gradient descent the updated weights, biases and cost function becom
         return 1 / (1 + np.exp(-x))'''
 
 4. We define a function called **predict** that takes a parameter X(the independent variables). Within the function
-           - We assign the mathematical estimation for the linear regression model to the variable name **linear_model**
-           - apply the **sigmoid** function to the **linear_model** and assigned it the variable name **y_predicted**
-           - we define the threshold within our sigmoid function for returning values of 0 and ! assigned to the variable name **y_predicted_cls** and return the array of the resulting value. 
+- We assign the mathematical estimation for the linear regression model to the variable name **linear_model**
+- apply the **sigmoid** function to the **linear_model** and assigned it the variable name **y_predicted**
+- we define the threshold within our sigmoid function for returning values of 0 and ! assigned to the variable name **y_predicted_cls** and return the array of the resulting value. 
           
           '''def predict(self, X):
                       linear_model = np.dot(X, self.weights) + self.bias
@@ -84,17 +84,18 @@ On applying gradient descent the updated weights, biases and cost function becom
                       return np.array(y_predicted_cls)'''
 
 5. A function called **fit** is created. Within this function  
-           - we assign the number of samples(n_samples) and the number of features(n_features) values equivalent to the number rows and columns of our independent variable(X) respectively.
-           - the weights are initialised using an array of zeroes following the dimension of n_features and bias is initialised with zero.
-           '''def fit(self, X, y):
+- we assign the number of samples(n_samples) and the number of features(n_features) values equivalent to the number rows and columns of our independent variable(X) respectively.
+- the weights are initialised using an array of zeroes following the dimension of n_features and bias is initialised with zero.
+           
+          '''def fit(self, X, y):
                n_samples, n_features = X.shape
                self.weights = np.zeros(n_features)
                self.bias = 0'''
 
-           - a **for loop** is created following the iterative process of the gradient descent of the cost function. The number of times the loop is set to run given by the value  **n_iters**.
-           - Within the **for loop** we have the following:
-                      - We assign the mathematical estimation for the linear regression model to the variable name **linear_model**
-                      - apply the **sigmoid** function to the **linear_model** and assigned it the variable name **y_predicted**
+- a **for loop** is created following the iterative process of the gradient descent of the cost function. The number of times the loop is set to run given by the value  **n_iters**.
+- Within the **for loop** we have the following:
+- We assign the mathematical estimation for the linear regression model to the variable name **linear_model**
+- apply the **sigmoid** function to the **linear_model** and assigned it the variable name **y_predicted**
                       
            '''for _ in range(self.n_iters):
                       linear_model = np.dot(X, self.weights) + self.bias
